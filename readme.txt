@@ -11,7 +11,7 @@ Each project represents a step in my journey to becoming a better web developer.
 ================================================================================
 
 1. FIRST WEBSITE
-   Location: /first website/
+   Location: /Portfolio/
    
    My very first HTML, CSS, and JavaScript project! This is where it all began.
    A simple project to learn the fundamentals of web development.
@@ -31,8 +31,8 @@ Each project represents a step in my journey to becoming a better web developer.
    • Technologies: HTML, CSS, JavaScript
 
 
-3. CONRADS TATTOO WEBSITE (CURRENT VERSION)
-   Location: /conrads tattoo website/
+3. FRIENDS TATTOO WEBSITE (CURRENT VERSION)
+   Location: /tattoo website (current build)/
    
    A professional website for Conrad's Tattoo Studio. This is the latest and
    most polished version, featuring a clean design and better functionality.
@@ -43,8 +43,8 @@ Each project represents a step in my journey to becoming a better web developer.
    • Improvements: Cleaner code, better user experience, enhanced styling
 
 
-4. ARCHIVE - PREVIOUS TATTOO WEBSITE VERSIONS
-   Location: /archive/
+4. PREVIOUS TATTOO WEBSITE VERSIONS
+   Location: /tattoo website (other versions)/
    
    Historical versions of the tattoo website showing my progression:
    
