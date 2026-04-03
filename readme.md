@@ -1,14 +1,13 @@
-================================================================================
                     MY WEB DEVELOPMENT LEARNING PROJECTS
-================================================================================
+
 
 Hi! I'm Willem and welcome to my web development portfolio! This repository contains all the
 websites and projects I've built while learning HTML, CSS, and JavaScript.
 Each project represents a step in my journey to becoming a better web developer.
 
-================================================================================
+
                                 PROJECTS
-================================================================================
+
 
 1. FIRST WEBSITE
    Location: /Portfolio/
@@ -57,18 +56,16 @@ Each project represents a step in my journey to becoming a better web developer.
      Shows the evolution of my web development skills.
 
 
-================================================================================
                               TECHNOLOGIES USED
-================================================================================
+
 
 ✓ HTML5 - Semantic markup, page structure, forms
 ✓ CSS3 - Styling, layouts, responsive design, animations
 ✓ JavaScript (Vanilla) - DOM manipulation, event handling, functions, logic
 
 
-================================================================================
                                 KEY LEARNINGS
-================================================================================
+
 
 Throughout these projects, I've learned:
 
@@ -80,9 +77,8 @@ Throughout these projects, I've learned:
 • Code Organization: Project structure, naming conventions, maintainability
 
 
-================================================================================
                               HOW TO USE THIS
-================================================================================
+
 
 1. Each project folder contains its own:
    - index.html (main page)
@@ -100,9 +96,8 @@ Throughout these projects, I've learned:
    - See the progression of my coding style and abilities
 
 
-================================================================================
                                 MY JOURNEY
-================================================================================
+
 
 This repository represents my learning journey from a complete beginner to
 someone with growing web development skills. Each project builds on previous
@@ -115,9 +110,8 @@ The progression shows:
 • From personal projects to professional-looking websites
 
 
-================================================================================
                               WHAT'S NEXT?
-================================================================================
+
 
 Future learning goals:
 • Advanced JavaScript (ES6+, async/await, APIs)
@@ -127,9 +121,8 @@ Future learning goals:
 • Responsive design and mobile optimization
 
 
-================================================================================
                            FEEL FREE TO EXPLORE!
-================================================================================
+
 
 This repository is meant to showcase my learning journey. I'm proud of how far
 I've come and excited to continue learning new web development skills!
@@ -138,4 +131,3 @@ Have questions or suggestions? Feel free to reach out!
 
 Happy exploring! 🚀
 
-================================================================================
