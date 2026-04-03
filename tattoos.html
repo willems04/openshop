@@ -17,7 +17,12 @@
                 <div class="logo">
                     <h1>CONRAD'S INK</h1>
                 </div>
-                <ul class="nav-menu">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
                     <li><a class="nav-a" href="index.html#home">Home</a></li>
                     <li><a class="nav-a" href="index.html#about">About</a></li>
                     <li><a class="nav-a" href="index.html#gallery">Gallery</a></li>
@@ -41,6 +46,7 @@
         <section class="section">
             <div class="content-wrapper">
                 <h2>All Tattoo Designs</h2>
+                <p class="swipe-hint">Swipe to view more <span aria-hidden="true">&rarr;</span></p>
                 <div class="gallery-grid-full">
                     <div class="gallery-card1">
                         <img src="assets/fillerimage.png" alt="Custom tattoo design 1">
@@ -89,6 +95,8 @@
             <a href="index.html#contact" class="cta-button">Book Now</a>
         </section>
     </main>
+
+    <a href="index.html#contact" class="mobile-book-now">Book Now</a>
 
     <!-- Footer -->
     <footer>
