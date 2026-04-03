@@ -413,6 +413,89 @@ main {
     font-weight: 600;
 }
 
+/* ==================== LIGHTBOX ==================== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    z-index: 1000;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: min(95vw, 1400px);
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent-color);
+    object-fit: contain;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-caption {
+    margin-top: 1rem;
+    color: var(--text-light);
+    text-align: center;
+    max-width: 90vw;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--accent-color);
+    background: rgba(26, 26, 26, 0.8);
+    color: var(--text-light);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-nav:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.lightbox-prev {
+    left: 1.25rem;
+}
+
+.lightbox-next {
+    right: 1.25rem;
+}
+
 /* ==================== SERVICES SECTION ==================== */
 .services {
     background-color: var(--secondary-color);
@@ -792,6 +875,29 @@ footer {
     .mobile-book-now:hover {
         color: #fff;
         background-color: var(--accent-light);
+    }
+
+    .lightbox {
+        padding: 1rem;
+    }
+
+    .lightbox-image {
+        max-width: 96vw;
+        max-height: 78vh;
+    }
+
+    .lightbox-nav {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+    }
+
+    .lightbox-prev {
+        left: 0.75rem;
+    }
+
+    .lightbox-next {
+        right: 0.75rem;
     }
 }
 

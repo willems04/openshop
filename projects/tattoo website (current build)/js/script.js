@@ -109,3 +109,111 @@ document.querySelectorAll('.section, .gallery, .services, .hours, .contact, .cta
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Gallery lightbox on tattoos page
+const lightbox = document.getElementById('gallery-lightbox');
+
+if (lightbox) {
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+    const lightboxNext = lightbox.querySelector('.lightbox-next');
+    const galleryCards = document.querySelectorAll('.gallery-grid-full .gallery-card1');
+    const galleryImages = Array.from(galleryCards)
+        .map((card) => card.querySelector('img'))
+        .filter((image) => image);
+    let currentImageIndex = -1;
+
+    const updateLightboxImage = (index) => {
+        if (!lightboxImage || galleryImages.length === 0) return;
+
+        const wrappedIndex = (index + galleryImages.length) % galleryImages.length;
+        const image = galleryImages[wrappedIndex];
+
+        currentImageIndex = wrappedIndex;
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt || 'Gallery image';
+
+        if (lightboxCaption) {
+            lightboxCaption.textContent = image.alt || '';
+        }
+    };
+
+    const openLightbox = (image) => {
+        if (!image) return;
+
+        const selectedIndex = galleryImages.indexOf(image);
+        if (selectedIndex === -1) return;
+
+        updateLightboxImage(selectedIndex);
+
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    galleryCards.forEach((card) => {
+        const image = card.querySelector('img');
+        if (!image) return;
+
+        card.style.cursor = 'pointer';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+
+        card.addEventListener('click', () => openLightbox(image));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(image);
+            }
+        });
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', () => {
+            if (currentImageIndex === -1) return;
+            updateLightboxImage(currentImageIndex - 1);
+        });
+    }
+
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', () => {
+            if (currentImageIndex === -1) return;
+            updateLightboxImage(currentImageIndex + 1);
+        });
+    }
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+
+        if (e.key === 'Escape') {
+            closeLightbox();
+            return;
+        }
+
+        if (e.key === 'ArrowLeft' && currentImageIndex !== -1) {
+            updateLightboxImage(currentImageIndex - 1);
+        }
+
+        if (e.key === 'ArrowRight' && currentImageIndex !== -1) {
+            updateLightboxImage(currentImageIndex + 1);
+        }
+    });
+}

@@ -46,7 +46,7 @@
         <section class="section">
             <div class="content-wrapper">
                 <h2>All Tattoo Designs</h2>
-                <p class="swipe-hint">Swipe to view more <span aria-hidden="true">&rarr;</span></p>
+                <p class="swipe-hint">click image to view full size</p>
                 <div class="gallery-grid-full">
                     <div class="gallery-card1">
                         <img src="assets/cd1.jpg" alt="Custom tattoo design 1">
@@ -207,6 +207,14 @@
     </main>
 
     <a href="index.html#contact" class="mobile-book-now">Book Now</a>
+
+    <div class="lightbox" id="gallery-lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">&#10095;</button>
+        <img src="" alt="" class="lightbox-image">
+        <p class="lightbox-caption"></p>
+    </div>
 
     <!-- Footer -->
     <footer>
