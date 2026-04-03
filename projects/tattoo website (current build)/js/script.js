@@ -1,5 +1,34 @@
 // Smooth scroll for navigation links
 const navLinks = document.querySelectorAll('.nav-a');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+const closeMobileMenu = () => {
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+};
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        navToggle.classList.toggle('active', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    });
+}
 
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -21,6 +50,10 @@ navLinks.forEach(link => {
         navLinks.forEach(link => link.classList.remove('active'));
         // Add active class to clicked link
         this.classList.add('active');
+
+        if (window.innerWidth <= 768) {
+            closeMobileMenu();
+        }
     });
 });
 
@@ -82,7 +115,33 @@ document.querySelectorAll('.section, .gallery, .services, .hours, .contact, .cta
 const galleryCards = document.querySelectorAll('.gallery-card');
 
 galleryCards.forEach(card => {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let hasSwiped = false;
+
+    card.addEventListener('touchstart', (e) => {
+        const touch = e.changedTouches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+        hasSwiped = false;
+    }, { passive: true });
+
+    card.addEventListener('touchmove', (e) => {
+        const touch = e.changedTouches[0];
+        const deltaX = Math.abs(touch.clientX - touchStartX);
+        const deltaY = Math.abs(touch.clientY - touchStartY);
+
+        if (deltaX > 12 || deltaY > 12) {
+            hasSwiped = true;
+        }
+    }, { passive: true });
+
     card.addEventListener('click', function() {
+        if (hasSwiped) {
+            hasSwiped = false;
+            return;
+        }
+
         window.location.href = 'tattoos.html';
     });
 });
