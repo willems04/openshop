@@ -1,10 +1,11 @@
 ## MY WEB DEVELOPMENT LEARNING PROJECTS
 
 
-Hi! I'm Willem and welcome to my web development portfolio! This repository contains all the
-websites and projects I've built while learning HTML, CSS, and JavaScript.
-Each project represents a step in my journey to becoming a better web developer.
+Hi! I'm Willem, and welcome to my web development portfolio.
+This repository contains the websites and projects I've built while learning HTML, CSS, and JavaScript.
+Each project represents a step in my journey to becoming a stronger web developer.
 
+In the future, I plan to get a small PC, set up a home server, and host a couple of sites I create; until then, this repo contains the bare website files.
 
 # Projects
 
@@ -12,8 +13,8 @@ Each project represents a step in my journey to becoming a better web developer.
 1. PORTFOLIO WEBSITE
    Location: /Portfolio/
    
-   My very first HTML, CSS, and JavaScript project! This is where it all began.
-   A simple project to learn the fundamentals of web development.
+   This was my first HTML, CSS, and JavaScript project, and where it all began.
+   It's a simple build focused on learning the fundamentals of web development.
    
    • Learns: Basic HTML structure, CSS styling, JavaScript basics
    • Features: Simple layout, basic interactivity
@@ -23,7 +24,7 @@ Each project represents a step in my journey to becoming a better web developer.
    Location: /calculator web/
    
    A functional web-based calculator built with vanilla JavaScript, HTML, and CSS.
-   This project helped me understand event handling and DOM manipulation.
+   This project helped me better understand event handling and DOM manipulation.
    
    • Learns: JavaScript functions, event listeners, DOM manipulation
    • Features: Basic arithmetic operations, responsive design
@@ -33,8 +34,8 @@ Each project represents a step in my journey to becoming a better web developer.
 3. FRIENDS TATTOO WEBSITE (CURRENT VERSION)
    Location: /tattoo website (current build)/
    
-   A professional website for Conrad's Tattoo Studio. This is the latest and
-   most polished version, featuring a clean design and better functionality.
+   A professional website for Conrad's Tattoo Studio.
+   This is the latest and most polished version, with a cleaner design and improved functionality.
    
    • Learns: Professional web design, navigation, portfolio displays
    • Features: Multiple pages, gallery displays, smooth navigation, CSS styling
@@ -45,15 +46,17 @@ Each project represents a step in my journey to becoming a better web developer.
 4. PREVIOUS TATTOO WEBSITE VERSIONS
    Location: /tattoo website (other versions)/
    
-   Historical versions of the tattoo website showing my progression:
+   Older tattoo website versions that show my progression:
    
    • Version 1 (Initial Build):
-     First attempt at the tattoo website. More basic structure, still needs
-     polishing and refinement. Good to see how far I've come!
+   My first attempt at the tattoo website.
+   The structure is more basic and still needs polish, but it's a great reminder of how far I've come.
    
    • Version 2 (Improved):
-     A cleaner version with better coding practices and improved functionality.
-     Shows the evolution of my web development skills.
+   A cleaner version with better coding practices and improved functionality.
+   I used AI tools sparingly to fix small issues and build on my original version.
+   This version reflects the growth in both my web development skills and design style.
+   
 
 
 # TECHNOLOGIES USED
@@ -67,7 +70,7 @@ Each project represents a step in my journey to becoming a better web developer.
 # KEY LEARNINGS                              
 
 
-Throughout these projects, I've learned:
+Across these projects, I've learned:
 
 • HTML Fundamentals: Structure, semantic tags, forms, linking
 • CSS Styling: Selectors, layouts, positioning, responsive design
@@ -88,7 +91,7 @@ Throughout these projects, I've learned:
 
 2. To view a project:
    - Open the index.html file in your web browser
-   - Or use a live server extension for better development experience
+   - Or use a Live Server extension for a better development experience
 
 3. To explore the code:
    - Open the project folder in a text editor or IDE
@@ -99,9 +102,9 @@ Throughout these projects, I've learned:
 # MY JOURNEY          
 
 
-This repository represents my learning journey from a complete beginner to
-someone with growing web development skills. Each project builds on previous
-knowledge and introduces new concepts.
+This repository reflects my learning journey from complete beginner to
+someone with growing web development skills. Each project builds on what I
+learned previously and introduces new concepts.
 
 The progression shows:
 • From basic websites to more complex projects
@@ -124,8 +127,8 @@ Future learning goals:
 # FEEL FREE TO EXPLORE!
 
 
-This repository is meant to showcase my learning journey. I'm proud of how far
-I've come and excited to continue learning new web development skills!
+This repository showcases my learning journey.
+I'm proud of how far I've come and excited to keep learning new web development skills.
 
 Have questions or suggestions? Feel free to reach out!
 
