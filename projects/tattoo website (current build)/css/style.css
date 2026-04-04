@@ -352,6 +352,7 @@ main {
 .gallery-grid-full {
     display: grid;
     gap: 2rem;
+    align-items: start;
 }
 
 .gallery-grid {
@@ -367,6 +368,7 @@ main {
     overflow: hidden;
     border-radius: var(--border-radius);
     border: 2px solid var(--accent-color);
+    align-self: start;
     transition: var(--transition);
 }
 
