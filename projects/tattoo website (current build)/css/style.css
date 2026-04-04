@@ -901,22 +901,25 @@ text-transform: none;
     .mobile-book-now {
         display: inline-block;
         position: fixed;
-        bottom: 1.5rem;
-        right: 1.5rem;
+        bottom: calc(0.9rem + env(safe-area-inset-bottom));
+        left: 50%;
+        transform: translateX(-50%);
         background: linear-gradient(135deg, var(--accent-gold), var(--accent-light));
         color: var(--text-dark);
         padding: 1rem 1.5rem;
         border-radius: 50px;
         font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
         text-transform: uppercase;
         letter-spacing: 1px;
-        z-index: 50;
+        z-index: 150;
         box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
         transition: var(--transition);
     }
 
     .mobile-book-now:hover {
-        transform: scale(1.1);
+        transform: translateX(-50%) scale(1.06);
         box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
     }
 }
