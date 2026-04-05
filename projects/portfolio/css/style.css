@@ -70,6 +70,17 @@ p {
     padding: 20px 24px 0;
 }
 
+.header-txt {
+    color: var(--text);
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+
+.header-txt:hover {
+    color: var(--accent);
+}
+
+
 .nav-bar {
     width: min(var(--content-width), calc(100% - 32px));
     margin: 0 auto;
@@ -98,6 +109,75 @@ p {
     font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 0.08em;
+    border: 0;
+    cursor: pointer;
+}
+
+.brand-mark:hover {
+    background: linear-gradient(135deg, #c7e7ff, #85cfff);
+}
+
+.brand-mark:active {
+    background: linear-gradient(135deg, #85cfff, #5d7cff);
+}
+
+.brand-dropdown {
+    position: relative;
+}
+
+.mobile-github-bar {
+    display: none;
+}
+
+.brand-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: min(280px, 72vw);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid var(--border-strong);
+    background: linear-gradient(180deg, rgba(16, 33, 56, 0.98), rgba(7, 17, 30, 0.98));
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.brand-dropdown.is-open .brand-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.brand-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(154, 196, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.brand-dropdown-item:hover,
+.brand-dropdown-item:focus-visible {
+    border-color: var(--border-strong);
+    background: rgba(124, 199, 255, 0.14);
+    color: var(--text);
 }
 
 .nav-links {
@@ -552,6 +632,14 @@ p {
     .stat-row {
         grid-template-columns: 1fr;
     }
+
+    .header-txt {
+        font-size: 1.4rem;
+    }
+
+    .section-heading {
+        margin-top: 60px;
+    }
 }
 
 @media (max-width: 720px) {
@@ -573,6 +661,49 @@ p {
 
     .brand-mark {
         margin: 0 auto;
+    }
+
+    .brand-dropdown {
+        display: flex;
+        justify-content: center;
+    }
+
+    .brand-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translate(-50%, -6px);
+    }
+
+    .brand-dropdown.is-open .brand-dropdown-menu {
+        transform: translate(-50%, 0);
+    }
+
+    .header-txt {
+        display: none;
+    }
+
+    .mobile-github-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+        padding: 14px 20px;
+        background: rgba(7, 17, 31, 0.9);
+        backdrop-filter: blur(18px);
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .mobile-github-bar:hover {
+        color: var(--accent);
     }
 
     .nav-links {
