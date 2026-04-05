@@ -12,7 +12,16 @@
 <body>
     <header class="site-header">
         <nav class="nav-bar">
-            <a class="brand-mark" href="index.html">WS</a>
+            <div class="brand-dropdown">
+                <button class="brand-mark" type="button" aria-expanded="false" aria-controls="brand-dropdown-menu">WS</button>
+                <div class="brand-dropdown-menu" id="brand-dropdown-menu">
+                    <a class="brand-dropdown-item" href="#">Filler Box 1</a>
+                    <a class="brand-dropdown-item" href="#">Filler Box 2</a>
+                    <a class="brand-dropdown-item" href="#">Filler Box 3</a>
+                    <a class="brand-dropdown-item" href="#">Filler Box 4</a>
+                </div>
+            </div>
+            <a class="header-txt" href="https://github.com/willems04">Powered By GitHub</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">My Projects</a></li>
@@ -109,6 +118,8 @@
     <footer class="site-footer">
         <p>Support is appreciated, but never expected.</p>
     </footer>
+
+    <a class="mobile-github-bar" href="https://github.com/willems04">Powered By GitHub</a>
 
     <script src="js/script.js"></script>
 </body>

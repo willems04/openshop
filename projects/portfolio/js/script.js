@@ -82,7 +82,42 @@ function setupSendEmailButton() {
 	});
 }
 
+function setupBrandDropdown() {
+	var dropdown = document.querySelector('.brand-dropdown');
+	if (!dropdown) {
+		return;
+	}
+
+	var toggle = dropdown.querySelector('.brand-mark');
+	if (!toggle) {
+		return;
+	}
+
+	function setOpenState(isOpen) {
+		dropdown.classList.toggle('is-open', isOpen);
+		toggle.setAttribute('aria-expanded', String(isOpen));
+	}
+
+	toggle.addEventListener('click', function () {
+		var isOpen = dropdown.classList.contains('is-open');
+		setOpenState(!isOpen);
+	});
+
+	document.addEventListener('click', function (event) {
+		if (!dropdown.contains(event.target)) {
+			setOpenState(false);
+		}
+	});
+
+	document.addEventListener('keydown', function (event) {
+		if (event.key === 'Escape') {
+			setOpenState(false);
+		}
+	});
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 	setupWalletQrs();
 	setupSendEmailButton();
+	setupBrandDropdown();
 });
