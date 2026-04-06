@@ -1,10 +1,10 @@
 # Hi, I'm Willem
 
-I'm new to HTML and CSS, but I'm learning more over time and building my JavaScript skills as I go.
+I know a little HTML and CSS, but I mostly spend my time making beats and producing music.
 
 ## About This Repo
 
-This is where I practice, build projects, and improve my web development skills step by step.
+A small HTML and CSS project. While my main focus is music production—making beats and producing songs—this repository also acts as a hub to organize my music work and maintain a simple website.
 
 ## Get in Touch
 
